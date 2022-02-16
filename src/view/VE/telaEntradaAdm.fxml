@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="620.0" style="-fx-background-color: #DEB887;;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FrontController">
+   <children>
+      <ImageView fitHeight="420.0" fitWidth="276.0" pickOnBounds="true">
+         <image>
+            <Image url="@WhatsApp%20Image%202021-10-11%20at%202.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="35.0" layoutY="44.0" text="EDITORA LIVROS E CAFÉ">
+         <font>
+            <Font name="System Italic" size="17.0" />
+         </font></Label>
+      <Label layoutX="294.0" layoutY="44.0" text="Bem-vindo, administrador ">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="294.0" layoutY="79.0" prefHeight="20.0" prefWidth="308.0" text="O que deseja fazer, cadastrar, alterar ou excluir?">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <ImageView fitHeight="48.0" fitWidth="41.0" layoutX="359.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image%2037.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="41.0" layoutX="359.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@lendo-um-livro%201.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="41.0" layoutX="359.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image%2038.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="41.0" layoutX="361.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image%2049.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="429.0" layoutY="136.0" mnemonicParsing="false" onMouseClicked="#telaTableAutores" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #856E51;" text="Autores" textFill="WHITE" />
+      <Button layoutX="429.0" layoutY="208.0" mnemonicParsing="false" onMouseClicked="#telaTableLivros" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #856E51;" text="Obras" textFill="WHITE" />
+      <Button layoutX="429.0" layoutY="275.0" mnemonicParsing="false" onMouseClicked="#telaTableAvaliadores" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #856E51;" text="Avaliadores" textFill="WHITE" />
+      <Button alignment="CENTER" layoutX="429.0" layoutY="340.0" mnemonicParsing="false" onMouseClicked="#telaRelatorios" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #856E51;" text="Relatório" textFill="WHITE" />
+      <HBox layoutX="532.0" layoutY="9.0" prefHeight="48.0" prefWidth="80.0">
+         <children>
+            <ImageView fitHeight="46.0" fitWidth="70.0" onMouseClicked="#voltar" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@seta-para-a-esquerda.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+   </children>
+</Pane>

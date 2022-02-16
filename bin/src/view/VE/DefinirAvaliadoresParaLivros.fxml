@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="735.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DefinirAvaliadoresController">
+   <children>
+      <AnchorPane prefHeight="550.0" prefWidth="218.0" style="-fx-background-color: #DEB887;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button layoutX="24.0" layoutY="367.0" mnemonicParsing="false" onMouseClicked="#save" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: green;" text="Definir Avaliador" />
+            <TextField fx:id="tituloFidLivro" layoutX="24.0" layoutY="164.0" prefHeight="30.0" prefWidth="180.0" promptText="Titulo Livro" />
+            <TextField fx:id="nomeFidAva" layoutX="24.0" layoutY="70.0" prefHeight="30.0" prefWidth="180.0" promptText="Nome Avaliador" />
+            <Button layoutX="24.0" layoutY="423.0" mnemonicParsing="false" onMouseClicked="#clean" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #ECDFDC;" text="Limpar" />
+            <TextField fx:id="idFidLivro" layoutX="24.0" layoutY="119.0" prefHeight="30.0" prefWidth="180.0" promptText="ID Livro" />
+            <TextField fx:id="idFidAva" layoutX="24.0" layoutY="27.0" prefHeight="30.0" prefWidth="180.0" promptText="ID Avaliador" />
+            <Button layoutX="24.0" layoutY="316.0" mnemonicParsing="false" onMouseClicked="#verAvaliadoresEscolhidos" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: Orange;" text="Ver obras e avaliadores" />
+            <Button layoutX="24.0" layoutY="474.0" mnemonicParsing="false" onMouseClicked="#removerAvaliador" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: red;" text="Remover avaliador" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tabelaAvaliadores" layoutX="239.0" layoutY="111.0" onMouseClicked="#getSelectedAva" prefHeight="329.0" prefWidth="225.0">
+        <columns>
+          <TableColumn fx:id="idColAvaliador" prefWidth="77.0" text="ID" />
+          <TableColumn fx:id="nomeColAvaliador" prefWidth="147.0" text="Nome" />
+        </columns>
+      </TableView>
+      <HBox layoutX="610.0" layoutY="16.0" prefHeight="51.0" prefWidth="92.0">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#refreshTable" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@refresh-page-option.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="52.0" fitWidth="51.0" onMouseClicked="#voltar" pickOnBounds="true">
+               <image>
+                  <Image url="@seta-para-a-esquerda.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="8.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <Text layoutX="239.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Definir Avaliadores">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tabelaLivros" layoutX="490.0" layoutY="111.0" onMouseClicked="#getSelectedLivros" prefHeight="329.0" prefWidth="241.0">
+        <columns>
+          <TableColumn fx:id="idColLivros" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tituloColLivros" prefWidth="165.0" text="Titulo" />
+        </columns>
+      </TableView>
+      <Text layoutX="239.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avaliadores">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="490.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Livros">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="620.0" style="-fx-background-color: #DEB887;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FrontController">
+   <children>
+      <ImageView fitHeight="420.0" fitWidth="285.0" layoutX="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@WhatsApp%20Image%202021-10-11%20at%202.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="427.0" layoutY="92.0" text="LOGIN">
+         <font>
+            <Font name="Californian FB" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="374.0" layoutY="132.0" text="Usuário:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="374.0" layoutY="192.0" text="Senha:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextField fx:id="logusuario" layoutX="374.0" layoutY="153.0" prefHeight="25.0" prefWidth="158.0" />
+      <TextField fx:id="senha" layoutX="374.0" layoutY="213.0" prefHeight="25.0" prefWidth="158.0" />
+      <Button fx:id="botaoLogin" layoutX="466.0" layoutY="281.0" mnemonicParsing="false" onAction="#autenticar" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: #ADD68A;" text="Entrar" />
+      <Label layoutX="33.0" layoutY="48.0" text="EDITORA LIVROS E CAFÉ">
+         <font>
+            <Font name="System Italic" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="erroAut" layoutX="366.0" layoutY="242.0" prefHeight="21.0" prefWidth="192.0" text="Usuário ou senha incorretos" textFill="#f20303" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+   </children>
+</Pane>

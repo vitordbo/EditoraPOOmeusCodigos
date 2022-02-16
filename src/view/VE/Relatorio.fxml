@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="419.0" prefWidth="687.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RelatorioController">
+   <children>
+      <VBox layoutX="-2.0" layoutY="-1.0" prefHeight="419.0" prefWidth="167.0" spacing="10.0" style="-fx-background-color: #DEB887;">
+         <children>
+            <Label text="Relatórios">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="hoje" mnemonicParsing="false" onMouseClicked="#hojeRelatorio" prefHeight="25.0" prefWidth="58.0" text="Hoje">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="7.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="umaSemana" mnemonicParsing="false" onMouseClicked="#umaSemanaRelatorio" prefHeight="25.0" prefWidth="58.0" text="7 dias">
+               <VBox.margin>
+                  <Insets left="7.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="duasSemanas" mnemonicParsing="false" onMouseClicked="#duasSemanasRelatorio" prefHeight="25.0" prefWidth="58.0" text="14 dias">
+               <VBox.margin>
+                  <Insets left="7.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="tresSemanas" mnemonicParsing="false" onMouseClicked="#tresSemanasRelatorio" prefWidth="58.0" text="21 dias">
+               <VBox.margin>
+                  <Insets left="7.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="umMes" mnemonicParsing="false" onMouseClicked="#mesRelatorio" prefWidth="58.0" text="30 dias">
+               <VBox.margin>
+                  <Insets left="7.0" />
+               </VBox.margin>
+            </Button>
+            <ImageView fitHeight="69.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image%2049.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="50.0" top="25.0" />
+               </VBox.margin>
+            </ImageView>
+         </children>
+      </VBox>
+      <TableView fx:id="tabelaRelatorios" layoutX="184.0" layoutY="91.0" prefHeight="286.0" prefWidth="482.0">
+        <columns>
+          <TableColumn fx:id="dataCol" prefWidth="75.0" text="Data" />
+          <TableColumn fx:id="StatusCol" prefWidth="123.0" text="Status Atual " />
+            <TableColumn fx:id="tituloCol" prefWidth="124.0" text="Titulo" />
+            <TableColumn fx:id="NomeAvaliadorCol" prefWidth="159.0" text="Nome Avaliador" />
+        </columns>
+      </TableView>
+      <Label fx:id="erroRelatorio" layoutX="184.0" layoutY="60.0" prefHeight="21.0" prefWidth="404.0" text="Relatório indisponível, por favor , selecione outro periodo" textFill="#e11b1b" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Button fx:id="pdfButton" layoutX="183.0" layoutY="29.0" mnemonicParsing="false" onMouseClicked="#pdf" prefHeight="25.0" prefWidth="128.0" text="Gerar PDF" />
+      <HBox layoutX="534.0" layoutY="10.0" onMouseClicked="#voltar" prefHeight="69.0" prefWidth="58.0" />
+      <Button fx:id="statusAntigos" layoutX="183.0" layoutY="58.0" mnemonicParsing="false" onMouseClicked="#mostraRegra" text="Ver Status Anteriores" />
+      <ImageView fitHeight="58.0" fitWidth="86.0" layoutX="608.0" layoutY="13.0" onMouseClicked="#voltar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@seta-para-a-esquerda.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
